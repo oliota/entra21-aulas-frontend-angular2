@@ -1,0 +1,102 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a routerLink="/" class="brand-link">
+      <img
+        src="./../favicon.ico"
+        alt="AdminLTE Logo"
+        class="brand-image img-circle elevation-3"
+        style="opacity: 0.8"
+      />
+      <span class="brand-text font-weight-light">Aulas Angular</span>
+    </a>
+
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul
+          class="nav nav-pills nav-sidebar flex-column"
+          data-widget="treeview"
+          role="menu"
+          data-accordion="false"
+        >
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Grupo de link 1
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item" *ngFor="let link of links">
+               
+                <a *ngIf="link.route" [routerLink]="link.route" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{link.title}}</p>
+                </a>
+                <a *ngIf="!link.route" [routerLink]="link.params" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{link.title}}</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a routerLink="pagina" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente pagina</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="outro" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente outro</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="property" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente property</p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a routerLink="event" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente event</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="twoWay" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente twoWay</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="enviar" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Enviar param component</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a [routerLink]="['/receber', 'primeiro dado','segundo dado']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Receber param link</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="diretivaIf" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente diretivaIf</p>
+                </a>
+              </li>
+
+              
+              <li class="nav-item">
+                <a routerLink="diretivaFor" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ver componente diretivaFor</p>
+                </a>
+              </li> -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>

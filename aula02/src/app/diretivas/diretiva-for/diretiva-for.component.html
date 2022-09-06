@@ -1,0 +1,20 @@
+<p>diretiva-for works!</p>
+
+<input type="text" [(ngModel)]="nome"  >
+<button (click)="add()" class="btn btn-outline-primary">Add</button>
+
+<table class="table table-bordered" *ngIf="nomes && nomes.length!=0">
+    <thead>
+        <th>#</th>
+        <th>Nome</th>
+        <th>Ação</th>
+    </thead>
+    <tbody >
+        <tr *ngFor="let nome of nomes; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{nome}}</td>
+            <td><button class="btn btn-outline-danger" (click)="deletar(i)">Deletar</button></td>
+        </tr>
+
+    </tbody>
+</table>

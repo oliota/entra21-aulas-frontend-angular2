@@ -1,0 +1,38 @@
+<p>diretiva-if works!</p>
+
+<input type="text" [(ngModel)]="nome"  >
+<input type="number" [(ngModel)]="idade"  > 
+
+<hr>
+Deve aparecer se o nome for rubem:
+<span *ngIf="nome=='rubem'">Sou eu</span>
+
+<hr>
+Deve aparecer se o nome não é pequeno:
+<span *ngIf="verificarNome()">Verificado tem no minimo 5 caracteres</span>
+
+<hr>
+Deve aparecer se o nome é pequeno:
+<span *ngIf="!verificarNome()">Nome ainda não atende aos requisitos</span>
+
+<hr>
+Deve aparecer se true:
+<span *ngIf="true">Se true , sempre aparece né</span>
+
+<hr>
+Deve aparecer se false:
+<span *ngIf="false">Se false , ninguem esta vendo isso</span>
+
+<hr>
+Deve aparecer se a variavel idade tiver um valor diferente do default:
+<span *ngIf="idade">Se varivel , tem valor</span>
+
+<hr>
+Deve aparecer se idade for =18:
+<span *ngIf="idade==18">Tem 18 anos  </span>
+
+<hr>
+Deve aparecer se for maior de idade:
+<span *ngIf="maiorIdade()">Tem 10 anos  </span>
+
+
